@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-model-form-component',
@@ -9,17 +9,34 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class ModelFormComponentComponent implements OnInit {
 
   myForm!: FormGroup;
+  name!:FormControl;
+  age!:FormControl;
+  city!:FormControl;
+  country!:FormControl;
+
   constructor() { }
 
   ngOnInit(): void {
 
-    this.myForm = new FormGroup({
-      name: new FormControl(),
-      age: new FormControl(),
-      city: new FormControl(),
-      country: new FormControl()
-    });
+    this.createFormControls();
+    this.createForm();
 
+  }
+
+  createForm(){
+    this.myForm = new FormGroup({
+      name:this.name,
+      age:this.age,
+      city:this.city,
+      country:this.country
+    });
+  }
+
+  createFormControls(){
+    this.name = new FormControl('',Validators.minLength(10)),
+    this.age = new FormControl('',[Validators.required,Validators.min(1)]),
+    this.city = new FormControl('',[Validators.required,Validators.minLength(5)]),
+    this.country = new FormControl()
   }
 
 }

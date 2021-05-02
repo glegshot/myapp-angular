@@ -10,10 +10,19 @@
         <div class="flex-item">
             <label><b>Age</b></label>
             <input type="text" name="age" placeholder="age" formControlName="age"/>
+            <pre *ngIf="age.touched && age.errors?.required">Age required</pre>
+            <pre *ngIf="age.errors?.min">Invalid age</pre>
         </div>
         <div class="flex-item">
             <label><strong>City</strong></label>
             <input type="text" name="city" placeholder="city" formControlName="city"/>
+            <pre>Touched? {{city.touched}}</pre>
+            <pre>Dirty? {{city.dirty}}</pre>
+            <pre>Pristine? {{city.pristine}}</pre>
+            <pre>Untouched? {{city.untouched}}</pre>
+            <pre>Valid? {{city.valid}}</pre>
+            <pre>InValid? {{city.invalid}}</pre>
+
         </div>
         <div class="flex-item">
             <label><strong>Country</strong></label>
