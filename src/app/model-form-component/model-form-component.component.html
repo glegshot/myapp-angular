@@ -1,0 +1,27 @@
+<p>model-form-component works!</p>
+
+<form [formGroup] = "myForm" novalidate>
+     <fieldset class="flex-container">
+        <legend style="background-color: gray;color: white;padding:5px">Add New Employee</legend>
+        <div class="flex-item">
+            <label><b>Name</b></label>
+            <input type="text" name="name" placeholder="name" formControlName="name"/>
+        </div>
+        <div class="flex-item">
+            <label><b>Age</b></label>
+            <input type="text" name="age" placeholder="age" formControlName="age"/>
+        </div>
+        <div class="flex-item">
+            <label><strong>City</strong></label>
+            <input type="text" name="city" placeholder="city" formControlName="city"/>
+        </div>
+        <div class="flex-item">
+            <label><strong>Country</strong></label>
+            <input type="text" name="country" placeholder="country" formControlName="country"/>
+        </div>
+        <div class="flex-item">
+            <button type="submit">Submit</button>
+        </div>
+    </fieldset>
+    <pre>{{myForm.value | json}}</pre>
+</form>
