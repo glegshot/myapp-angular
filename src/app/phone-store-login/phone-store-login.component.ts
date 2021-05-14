@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-phone-store-login',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhoneStoreLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private notificationService: NotificationService) { }
 
   ngOnInit(): void {
+  }
+
+  notify(){
+    this.notificationService.sendMessage("hello from login");
   }
 
 }
