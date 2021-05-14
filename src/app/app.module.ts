@@ -6,11 +6,23 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PhoneStoreHeaderComponent } from './phone-store-header/phone-store-header.component';
+import { PhoneStoreHomeComponent } from './phone-store-home/phone-store-home.component';
+import { PhoneStoreProductComponent } from './phone-store-product/phone-store-product.component';
+import { PhoneStoreProductListComponent } from './phone-store-product-list/phone-store-product-list.component';
+import { PhoneStorePagenotfoundComponent } from './phone-store-pagenotfound/phone-store-pagenotfound.component';
+import { PhoneStoreLoginComponent } from './phone-store-login/phone-store-login.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent  
+    AppComponent,
+    PhoneStoreHeaderComponent,
+    PhoneStoreHomeComponent,
+    PhoneStoreProductComponent,
+    PhoneStoreProductListComponent,
+    PhoneStorePagenotfoundComponent,
+    PhoneStoreLoginComponent  
 ],
   imports: [
     BrowserModule,
