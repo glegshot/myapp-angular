@@ -12,6 +12,7 @@ import { PhoneStoreProductComponent } from './phone-store-product/phone-store-pr
 import { PhoneStoreProductListComponent } from './phone-store-product-list/phone-store-product-list.component';
 import { PhoneStorePagenotfoundComponent } from './phone-store-pagenotfound/phone-store-pagenotfound.component';
 import { PhoneStoreLoginComponent } from './phone-store-login/phone-store-login.component';
+import { PhoneStoreNotificationComponent } from './phone-store-notification/phone-store-notification.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { PhoneStoreLoginComponent } from './phone-store-login/phone-store-login.
     PhoneStoreProductComponent,
     PhoneStoreProductListComponent,
     PhoneStorePagenotfoundComponent,
-    PhoneStoreLoginComponent  
+    PhoneStoreLoginComponent,
+    PhoneStoreNotificationComponent  
 ],
   imports: [
     BrowserModule,

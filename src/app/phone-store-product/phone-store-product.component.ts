@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-phone-store-product',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhoneStoreProductComponent implements OnInit {
 
-  constructor() { }
+  productId!: number;
+
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getProductDetails()
+  }
+
+  getProductDetails(): void {
+    this.productId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+
   }
 
 }

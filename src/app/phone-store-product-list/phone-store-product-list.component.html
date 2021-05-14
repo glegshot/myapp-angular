@@ -1,1 +1,6 @@
-<p>phone-store-product-list works!</p>
+<div>
+    <div *ngFor="let product of products;let i=index">
+        <a routerLink="/product/{{ product.id }}"><h2>{{ i }} . {{ product.name }}</h2></a>
+        <p>{{ product.description }}</p>
+    </div>
+</div>
