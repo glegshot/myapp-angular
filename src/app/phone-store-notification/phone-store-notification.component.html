@@ -1,3 +1,7 @@
-<div *ngFor="let item of messages">
-    {{ item }}
+<div class="position-absolute top-5 end-0" >
+    <div *ngFor="let item of messages">
+        <div class=" shadow p-3 alert alert-success me-3" role="alert">
+            {{ item }}
+        </div>
+    </div>
 </div>

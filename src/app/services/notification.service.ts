@@ -14,7 +14,7 @@ export class NotificationService {
   }
 
   getMessage(): Observable<string>{
-    return this.messagesSubject.asObservable();
+    return this.messagesSubject;
   }
 
   sendMessage(message: string){
